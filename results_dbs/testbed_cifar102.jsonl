@@ -1,0 +1,76 @@
+{"uuid": "022248ac-ddf8-413f-b471-3a37ec9f43ba", "name": "022248ac-ddf8-413f-b471-3a37ec9f43ba", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "0e254db9-7f39-4441-ad4e-06d5ef5bfe4e", "name": "0e254db9-7f39-4441-ad4e-06d5ef5bfe4e", "subtype": "RandomForest", "model_name": "Random Forest"}
+{"uuid": "0f7214c5-7520-450f-8ca5-32571c747e41", "name": "0f7214c5-7520-450f-8ca5-32571c747e41", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "11ecf605-463b-4df4-9c55-9dbd9429ca2b", "name": "11ecf605-463b-4df4-9c55-9dbd9429ca2b", "subtype": "RidgeClassifier", "model_name": "RidgeClassifier"}
+{"uuid": "14f484aa-c7df-4e37-862a-9fadc9b27393", "name": "14f484aa-c7df-4e37-862a-9fadc9b27393", "subtype": "QuadraticDiscrimantAnalysis", "model_name": "Neural Network"}
+{"uuid": "1deb0c3d-a061-4577-9d3b-95c9549a5ea8", "name": "1deb0c3d-a061-4577-9d3b-95c9549a5ea8", "subtype": "RidgeClassifier", "model_name": "RidgeClassifier"}
+{"uuid": "2214cdeb-fb1d-40a5-9c92-283084fe1f32", "name": "2214cdeb-fb1d-40a5-9c92-283084fe1f32", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "224c8c2a-44b5-467a-9455-6240e1ef28a7", "name": "224c8c2a-44b5-467a-9455-6240e1ef28a7", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "2465e873-8103-472f-904c-a36fea94af5f", "name": "2465e873-8103-472f-904c-a36fea94af5f", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "2901a319-bb5a-4ce8-90f4-946425334c05", "name": "2901a319-bb5a-4ce8-90f4-946425334c05", "subtype": "K_nearest_neighbors", "model_name": "KNN"}
+{"uuid": "2b593723-abf1-4d3b-b4f5-49245e856628", "name": "2b593723-abf1-4d3b-b4f5-49245e856628", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "2ff4a5ef-619f-4d62-b9d8-e40a72fd1964", "name": "2ff4a5ef-619f-4d62-b9d8-e40a72fd1964", "subtype": "RidgeClassifier", "model_name": "RidgeClassifier"}
+{"uuid": "336c96de-8608-45d9-a43e-18a7b9575d9b", "name": "336c96de-8608-45d9-a43e-18a7b9575d9b", "subtype": "RidgeClassifier", "model_name": "RidgeClassifier"}
+{"uuid": "3723bfee-3981-46d6-bcde-9fa11188e2bb", "name": "3723bfee-3981-46d6-bcde-9fa11188e2bb", "subtype": "RandomForest", "model_name": "Random Forest"}
+{"uuid": "3ac89be8-e640-461f-b3fd-182cf71a1a99", "name": "3ac89be8-e640-461f-b3fd-182cf71a1a99", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "3b8f74a3-6e00-4a47-bd1f-82bf167b3fa6", "name": "3b8f74a3-6e00-4a47-bd1f-82bf167b3fa6", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "3bb5f3b5-c63f-46e7-9ff6-9fef2ee105be", "name": "3bb5f3b5-c63f-46e7-9ff6-9fef2ee105be", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "3d554c7a-f26f-4e46-aa1a-d41a9e980cc7", "name": "3d554c7a-f26f-4e46-aa1a-d41a9e980cc7", "subtype": "AdaBoost", "model_name": "Neural Network"}
+{"uuid": "40cbabf8-ae1c-4b99-b81f-993cf37a247f", "name": "40cbabf8-ae1c-4b99-b81f-993cf37a247f", "subtype": "RandFeaturesCoatesNg_2to8", "model_name": "Random Features", "cifar10-test:top1": 0.4739, "cifar10.2-test:top1": 0.452}
+{"uuid": "42b971fe-7408-429c-a960-9aed49649cb1", "name": "42b971fe-7408-429c-a960-9aed49649cb1", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "462c036e-e824-4209-8db1-d8f28fec2ab4", "name": "462c036e-e824-4209-8db1-d8f28fec2ab4", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "4f8ded9e-f642-4192-bd57-169567716596", "name": "4f8ded9e-f642-4192-bd57-169567716596", "subtype": "RandomForest", "model_name": "Random Forest"}
+{"uuid": "5166b9ee-d3dd-4bbd-8ecd-7113e1e8e351", "name": "5166b9ee-d3dd-4bbd-8ecd-7113e1e8e351", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "563b042e-2cfa-470b-aeee-3829aa09ee72", "name": "563b042e-2cfa-470b-aeee-3829aa09ee72", "subtype": "RandFeaturesCoatesNg_2to2", "model_name": "Random Features", "cifar10-test:top1": 0.3506, "cifar10.2-test:top1": 0.3225}
+{"uuid": "580b0939-6343-4fe6-8dab-e16d21fdee68", "name": "580b0939-6343-4fe6-8dab-e16d21fdee68", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "5b73b8f8-1700-4325-8965-a0f205d2e6b1", "name": "5b73b8f8-1700-4325-8965-a0f205d2e6b1", "subtype": "LogisticRegression", "model_name": "Neural Network"}
+{"uuid": "6021ef4e-4445-4895-be8d-8be5a2b6a797", "name": "6021ef4e-4445-4895-be8d-8be5a2b6a797", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "61712b21-e35e-4fe4-8e98-c716d3445d6c", "name": "61712b21-e35e-4fe4-8e98-c716d3445d6c", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "63c25f68-e3d1-4303-b295-3c90284b8e67", "name": "63c25f68-e3d1-4303-b295-3c90284b8e67", "subtype": "RidgeClassifier", "model_name": "RidgeClassifier"}
+{"uuid": "68160a72-481a-4a54-a33e-ee2617002667", "name": "68160a72-481a-4a54-a33e-ee2617002667", "subtype": "K_nearest_neighbors", "model_name": "KNN"}
+{"uuid": "6d0e02fb-d631-4816-9238-df9bc341b0ee", "name": "6d0e02fb-d631-4816-9238-df9bc341b0ee", "subtype": "AdaBoost", "model_name": "Neural Network"}
+{"uuid": "6dbfa61a-b479-4eb8-9183-32f95a26f40e", "name": "6dbfa61a-b479-4eb8-9183-32f95a26f40e", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "6fc998a2-4696-44ea-98c2-f124f298000f", "name": "6fc998a2-4696-44ea-98c2-f124f298000f", "subtype": "RandFeaturesCoatesNg_2to1", "model_name": "Random Features", "cifar10.2-test:top1": 0.2975, "cifar10-test:top1": 0.3216}
+{"uuid": "72a01120-139c-4f48-b4f4-e6e601f4338a", "name": "72a01120-139c-4f48-b4f4-e6e601f4338a", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "73eadf59-dc3d-4d48-99cc-1e4c471a9d50", "name": "73eadf59-dc3d-4d48-99cc-1e4c471a9d50", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "74ea5452-24ef-4161-b3a4-4521b7b7ed01", "name": "74ea5452-24ef-4161-b3a4-4521b7b7ed01", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "798d60cf-cac6-41cd-9930-7a4e78b779b2", "name": "798d60cf-cac6-41cd-9930-7a4e78b779b2", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "7ad63901-27bf-4921-ba6a-1c78b6812537", "name": "7ad63901-27bf-4921-ba6a-1c78b6812537", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "7b6ca874-ff58-4f0c-ae79-c5b443cce1d0", "name": "7b6ca874-ff58-4f0c-ae79-c5b443cce1d0", "subtype": "RandomForest", "model_name": "Random Forest"}
+{"uuid": "845331ab-702f-42ce-845a-d52bd252f992", "name": "845331ab-702f-42ce-845a-d52bd252f992", "subtype": "RandFeaturesCoatesNg_2to15", "model_name": "Random Features", "cifar10-test:top1": 0.6257, "cifar10.2-test:top1": 0.5895}
+{"uuid": "861205dc-0d74-42fe-a846-c90d6ad80abd", "name": "861205dc-0d74-42fe-a846-c90d6ad80abd", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "8ecda7d7-c3b0-45b4-8b8c-78e80a10c392", "name": "8ecda7d7-c3b0-45b4-8b8c-78e80a10c392", "subtype": "AdaBoost", "model_name": "Neural Network"}
+{"uuid": "8f47d29a-3008-45a2-8d8a-24056203503a", "name": "8f47d29a-3008-45a2-8d8a-24056203503a", "subtype": "RandomForest", "model_name": "Random Forest"}
+{"uuid": "935801ba-078a-4d2f-a959-660a168b932e", "name": "935801ba-078a-4d2f-a959-660a168b932e", "subtype": "RidgeClassifier", "model_name": "RidgeClassifier"}
+{"uuid": "98daa13b-640c-4562-886e-12e3c292b3a9", "name": "98daa13b-640c-4562-886e-12e3c292b3a9", "subtype": "RandFeaturesCoatesNg_2to12", "model_name": "Random Features", "cifar10.2-test:top1": 0.508, "cifar10-test:top1": 0.5576}
+{"uuid": "9a892a40-77bf-41b6-a6fe-11f702370421", "name": "9a892a40-77bf-41b6-a6fe-11f702370421", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "9ade6811-41b4-4150-b94a-163548d1b4f5", "name": "9ade6811-41b4-4150-b94a-163548d1b4f5", "subtype": "RandFeaturesCoatesNg_2to3", "model_name": "Random Features", "cifar10.2-test:top1": 0.403, "cifar10-test:top1": 0.4451}
+{"uuid": "a0cb148a-c943-418f-86d2-d9f9e94fce5a", "name": "a0cb148a-c943-418f-86d2-d9f9e94fce5a", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "a2e7ffa6-b817-4d52-9a01-3034e95e94c7", "name": "a2e7ffa6-b817-4d52-9a01-3034e95e94c7", "subtype": "RandFeaturesCoatesNg_2to11", "model_name": "Random Features", "cifar10.2-test:top1": 0.4505, "cifar10-test:top1": 0.4792}
+{"uuid": "a716dca1-349c-4145-9aae-81a7641dea7e", "name": "a716dca1-349c-4145-9aae-81a7641dea7e", "subtype": "RandomForest", "model_name": "Random Forest"}
+{"uuid": "a8ec3de2-47a9-417e-a8aa-1e3c2b4c4755", "name": "a8ec3de2-47a9-417e-a8aa-1e3c2b4c4755", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "a9bf8aac-84e3-46ec-960a-272f7d5a57e1", "name": "a9bf8aac-84e3-46ec-960a-272f7d5a57e1", "subtype": "RidgeClassifier", "model_name": "RidgeClassifier"}
+{"uuid": "aa5f26c4-38a1-448b-9ac3-db99110f097e", "name": "aa5f26c4-38a1-448b-9ac3-db99110f097e", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "ae672f6e-1f4c-4f24-816d-07750f93dce1", "name": "ae672f6e-1f4c-4f24-816d-07750f93dce1", "subtype": "LogisticRegression", "model_name": "Neural Network"}
+{"uuid": "b49a3263-48aa-4906-af60-1f7ee5039657", "name": "b49a3263-48aa-4906-af60-1f7ee5039657", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "b50efcfa-9066-4185-a3b2-55001a565178", "name": "b50efcfa-9066-4185-a3b2-55001a565178", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "ba93207b-4577-4a3d-8472-d31bb90fa911", "name": "ba93207b-4577-4a3d-8472-d31bb90fa911", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "bc2a3b78-6bc5-4c12-b446-e4f12c940c06", "name": "bc2a3b78-6bc5-4c12-b446-e4f12c940c06", "subtype": "myrtlenet", "model_name": "Neural Network", "cifar10-test:top1": 0.863, "cifar10-test-brightness_tmp_4:top1": 0.876, "cifar10.2-test:top1": 0.8165, "cifar10-test-brightness_tmp_5:top1": 0.8525, "cifar10-test-brightness_tmp_2:top1": 0.854, "cifar10-test-brightness_tmp_1:top1": 0.855, "cifar10-test-brightness_tmp_3:top1": 0.8775}
+{"uuid": "c05cf5a0-7e60-44b7-9d29-071041a6d62a", "name": "c05cf5a0-7e60-44b7-9d29-071041a6d62a", "subtype": "RandFeaturesCoatesNg_2to9", "model_name": "Random Features", "cifar10-test:top1": 0.2085, "cifar10.2-test:top1": 0.2085}
+{"uuid": "c1121642-b0b1-445f-b611-d534debee9d2", "name": "c1121642-b0b1-445f-b611-d534debee9d2", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "c1c21fac-c6a3-4040-ac68-fee45f029191", "name": "c1c21fac-c6a3-4040-ac68-fee45f029191", "subtype": "RandFeaturesCoatesNg_2to7", "model_name": "Random Features", "cifar10-test:top1": 0.5256, "cifar10.2-test:top1": 0.51}
+{"uuid": "c1c5663e-e80b-4330-bdbe-70ed6f0c605f", "name": "c1c5663e-e80b-4330-bdbe-70ed6f0c605f", "subtype": "RandFeaturesCoatesNg_2to5", "model_name": "Random Features", "cifar10.2-test:top1": 0.4795, "cifar10-test:top1": 0.508}
+{"uuid": "c5cb4a56-db07-4534-bab1-137111713b3f", "name": "c5cb4a56-db07-4534-bab1-137111713b3f", "subtype": "RidgeClassifier", "model_name": "RidgeClassifier"}
+{"uuid": "c7bc53b1-6520-4d12-9916-3df6897f18b7", "name": "c7bc53b1-6520-4d12-9916-3df6897f18b7", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "cc8aa89f-a19f-4b3b-8c04-438725b16040", "name": "cc8aa89f-a19f-4b3b-8c04-438725b16040", "subtype": "RandFeaturesCoatesNg_2to10", "model_name": "Random Features", "cifar10-test:top1": 0.3769, "cifar10.2-test:top1": 0.345}
+{"uuid": "cd302e8d-3634-4860-85ad-09044d6d361f", "name": "cd302e8d-3634-4860-85ad-09044d6d361f", "subtype": "RandFeaturesCoatesNg_2to14", "model_name": "Random Features", "cifar10-test:top1": 0.6118, "cifar10.2-test:top1": 0.5765}
+{"uuid": "cd52c265-92fc-4f10-80ec-d884f05bad58", "name": "cd52c265-92fc-4f10-80ec-d884f05bad58", "subtype": "RandFeaturesCoatesNg_2to4", "model_name": "Random Features", "cifar10-test:top1": 0.4802, "cifar10.2-test:top1": 0.4325}
+{"uuid": "d8175290-b225-415a-adb6-d6481e196090", "name": "d8175290-b225-415a-adb6-d6481e196090", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "db970f9c-841e-44ad-bc5a-266560867d39", "name": "db970f9c-841e-44ad-bc5a-266560867d39", "subtype": "RandFeaturesCoatesNg_2to0", "model_name": "Random Features", "cifar10.2-test:top1": 0.2195, "cifar10-test:top1": 0.2305}
+{"uuid": "e7a760dc-4dfd-49c9-bb4f-85d4a37466c3", "name": "e7a760dc-4dfd-49c9-bb4f-85d4a37466c3", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "eb6897c8-3c2b-48b9-be6d-b3f1a6ed834d", "name": "eb6897c8-3c2b-48b9-be6d-b3f1a6ed834d", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "ee39b42c-be75-4120-b916-bc65e177578a", "name": "ee39b42c-be75-4120-b916-bc65e177578a", "subtype": "LogisticRegression", "model_name": "Neural Network"}
+{"uuid": "f33fcb18-058e-4dff-984a-4d72a65df887", "name": "f33fcb18-058e-4dff-984a-4d72a65df887", "subtype": "RandFeaturesCoatesNg_2to13", "model_name": "Random Features", "cifar10.2-test:top1": 0.56, "cifar10-test:top1": 0.5812}
+{"uuid": "f50b0d9e-60c9-4eb6-93d9-27f2257e3858", "name": "f50b0d9e-60c9-4eb6-93d9-27f2257e3858", "subtype": "RandFeaturesCoatesNg_2to6", "model_name": "Random Features", "cifar10.2-test:top1": 0.484, "cifar10-test:top1": 0.5213}
+{"uuid": "f622180b-48b2-4519-8f23-a425a7927528", "name": "f622180b-48b2-4519-8f23-a425a7927528", "subtype": "SVM", "model_name": "SVM"}
+{"uuid": "f9d71e31-bcd7-4f6b-b5a1-4bbe839b90e4", "name": "f9d71e31-bcd7-4f6b-b5a1-4bbe839b90e4", "subtype": "K_nearest_neighbors", "model_name": "KNN"}
