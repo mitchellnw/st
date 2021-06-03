@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import scipy
@@ -25,6 +26,8 @@ def get_df(dataset):
         df = pd.read_json('results_dbs/imagenet.jsonl', lines=True).dropna()
     elif 'FMOW' in dataset:
         df = pd.read_json('results_dbs/fmow.jsonl', lines=True).dropna()
+    elif 'IWildCam' in dataset:
+        df = pd.read_json('results_dbs/iwildcam.jsonl', lines=True).dropna()
     return df
 
 def add_baselines(dataset, test_dataset, x=None, y=None):
@@ -32,11 +35,51 @@ def add_baselines(dataset, test_dataset, x=None, y=None):
         tx = x
         ty = y
         testbed_df = pd.read_json('results_dbs/testbed_imagenet.jsonl', lines=True).dropna(subset=[tx,ty])
+        cmap = {
+            'Standard training': 'tab:blue',
+            'Lp adversarially robust': 'olive',
+           'Other robustness intervention': 'tab:brown',
+           'Trained with more data': 'tab:green',
+        }
+        for name, group in testbed_df.groupby('type'):
+            ax.scatter(
+                transform(group[tx]),
+                transform(group[ty]),
+                label=name,
+                alpha=0.5,
+                color=cmap[name]
+            )
+        add_linear_trend(ax, testbed_df[tx], testbed_df[ty], xrange, transform)
+        return
+    elif dataset == 'CIFAR10':
+        if test_dataset == 'CIFAR10.2':
+            tx = 'cifar10_accuracy'
+            ty = 'cifar10.2-test_accuracy'
+            testbed_df = pd.read_csv('results_dbs/johns_cifar102.csv').dropna(subset=[tx,ty])
+        elif test_dataset == 'CIFAR10.1':
+            tx = 'cifar10_accuracy'
+            ty = 'cifar10.1-v6_accuracy'
+            testbed_df = pd.read_csv('results_dbs/johns_cifar101.csv').dropna(subset=[tx,ty])
 
-    elif dataset == 'CIFAR10' and test_dataset == 'CIFAR10.2':
-        tx = 'cifar10-test:top1'
-        ty = 'cifar10.2-test:top1'
-        testbed_df = pd.read_json('results_dbs/testbed_cifar10.jsonl', lines=True).dropna(subset=[tx,ty])
+        imgn_pretrained = testbed_df[testbed_df['pretrained']]
+        trained =  testbed_df[~testbed_df['pretrained']]
+        ax.scatter(
+            transform(trained[tx]),
+            transform(trained[ty]),
+            label='Baseline',
+            alpha=0.5,
+            color='C0'
+        )
+        ax.scatter(
+            transform(imgn_pretrained[tx]),
+            transform(imgn_pretrained[ty]),
+            label='Baseline (pretrained)',
+            alpha=0.5,
+            color='C1'
+        )
+
+        add_linear_trend(ax, testbed_df[tx], testbed_df[ty], xrange, transform)
+        return
 
     elif dataset == 'FMOW':
         tx = f"FMoW-id_test:{':'.join(x.split(':')[1:])}"
@@ -44,6 +87,53 @@ def add_baselines(dataset, test_dataset, x=None, y=None):
         testbed_df = pd.read_json('results_dbs/testbed_fmow.jsonl', lines=True).dropna(subset=[tx,ty])
         testbed_df = testbed_df[testbed_df[tx] > 0.05]
         testbed_df = testbed_df[testbed_df[ty] > 0.05]
+
+        imgn_pretrained = testbed_df[testbed_df['model_name'] == 'Imagenet Pretrained Neural Network']
+        trained =  testbed_df[testbed_df['model_name'] != 'Imagenet Pretrained Neural Network']
+        ax.scatter(
+            transform(trained[tx]),
+            transform(trained[ty]),
+            label='Baseline',
+            alpha=0.5,
+            color='C0'
+        )
+        ax.scatter(
+            transform(imgn_pretrained[tx]),
+            transform(imgn_pretrained[ty]),
+            label='Baseline (pretrained)',
+            alpha=0.5,
+            color='C1'
+        )
+
+        add_linear_trend(ax, testbed_df[tx], testbed_df[ty], xrange, transform)
+        return
+    elif dataset == 'IWildCam':
+        tx = f"IWildCamOfficialV2-id_test:{':'.join(x.split(':')[1:])}"
+        ty = f"IWildCamOfficialV2-ood_test:{':'.join(y.split(':')[1:])}"
+        testbed_df = pd.read_json('results_dbs/testbed_iwildcam.jsonl', lines=True).dropna(subset=[tx,ty])
+        testbed_df = testbed_df[testbed_df[tx] > 0.03]
+        testbed_df = testbed_df[testbed_df[ty] > 0.03]
+
+
+        imgn_pretrained = testbed_df[testbed_df['model_name'] == 'Imagenet Pretrained Neural Network']
+        trained =  testbed_df[testbed_df['model_name'] != 'Imagenet Pretrained Neural Network']
+        ax.scatter(
+            transform(trained[tx]),
+            transform(trained[ty]),
+            label='Baseline',
+            alpha=0.5,
+            color='C0'
+        )
+        ax.scatter(
+            transform(imgn_pretrained[tx]),
+            transform(imgn_pretrained[ty]),
+            label='Baseline (pretrained)',
+            alpha=0.5,
+            color='C1'
+        )
+
+        add_linear_trend(ax, testbed_df[tx], testbed_df[ty], xrange, transform)
+        return
     else:
         return
 
@@ -329,7 +419,7 @@ if __name__ == '__main__':
 
     dataset = st.selectbox(
     'Trainset',
-    ['ImageNet', 'ImageNet50', 'ImageNet25', 'CIFAR10', 'FMOW'])
+    ['ImageNet', 'ImageNet50', 'ImageNet25', 'CIFAR10', 'FMOW', 'IWildCam'])
 
     if dataset == 'CIFAR10':
         yaxis = st.selectbox(
@@ -360,6 +450,19 @@ if __name__ == '__main__':
              "FMOWOOD:acc_region:Americas",
              "FMOWOOD:acc_region:Oceania",
              "FMOWOOD:acc_region:Other",
+             ])
+        xrange = st.slider("xrange", 0.001, 0.99, (0.05, 0.6), 0.01)
+        yrange = st.slider("yrange", 0.001, 0.99, (0.05, 0.6), 0.01)
+    elif dataset == 'IWildCam':
+        xaxis = st.selectbox(
+            'xaxis',
+            ['IWildCamID:acc_avg',
+             'IWildCamID:F1-macro_all',
+             ])
+        yaxis = st.selectbox(
+            'yaxis',
+            ['IWildCamOOD:acc_avg',
+             'IWildCamOOD:F1-macro_all',
              ])
         xrange = st.slider("xrange", 0.001, 0.99, (0.05, 0.6), 0.01)
         yrange = st.slider("yrange", 0.001, 0.99, (0.05, 0.6), 0.01)
@@ -415,7 +518,7 @@ if __name__ == '__main__':
     elif dataset == 'CIFAR10':
         x = 'CIFAR10:top1'
         y = 'CIFAR101:top1' if '.1' in yaxis else 'CIFAR102:top1'
-    elif dataset == 'FMOW':
+    else:
         x = xaxis#'FMOWID:acc_avg'
         y = yaxis#'FMOWOOD:acc_avg'
 
