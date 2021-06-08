@@ -68,7 +68,7 @@ def format(plt, nomp=False, notex=False):
 
 
 
-def get_plot(xrange, yrange, scaling, figsize=(9,8), notex=False):
+def get_plot(xrange, yrange, scaling, figsize=(9,8), notex=False, skip_linear=False):
 
     format(plt, notex=notex)
     if scaling == 'probit':
@@ -97,7 +97,8 @@ def get_plot(xrange, yrange, scaling, figsize=(9,8), notex=False):
     ax.set_yticklabels([str(int(loc * 100)) for loc in tick_loc_y])
 
     z = np.arange(min(xrange[0], yrange[0]), max(xrange[1], yrange[1]), 0.01)
-    ax.plot(transform(z), transform(z), color="#A8A8A8", ls='--', label='$y = x$')
+    if not skip_linear:
+        ax.plot(transform(z), transform(z), color="#A8A8A8", ls='--', label='$y = x$')
 
     ax.set_ylim(h(yrange[0]),h(yrange[1]))
     ax.set_xlim(h(xrange[0]),h(xrange[1]))
