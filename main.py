@@ -586,17 +586,20 @@ INITIAL_CONF = {
 
 @provide_state
 def main(state):
+    # Create an empty slot for the main plot, which we fill later.
+    plot_slot = st.empty()
 
     query_params = st.experimental_get_query_params()
     if "conf" in query_params:
         state.conf = json.loads(query_params["conf"][0])
     state.conf = state.conf or INITIAL_CONF
 
-
-
     dataset = st.selectbox(
-    'Trainset',
-    put_first(state.conf["dataset"], ['ImageNet', 'ImageNet50', 'ImageNet25', 'CIFAR10', 'FMOW', 'IWildCam', 'Cars', 'Pets', 'Food101', 'Caltech101'])#,
+        'Trainset',
+        put_first(
+            state.conf["dataset"],
+            ['ImageNet', 'ImageNet50', 'ImageNet25', 'CIFAR10', 'FMOW', 'IWildCam', 'Cars', 'Pets', 'Food101', 'Caltech101']
+        )
     )
 
     savexrange = True
@@ -733,7 +736,6 @@ def main(state):
 
     experimental_options = []
 
-
     fig, axlist, transform = get_plot(xrange, yrange, scaling, figsize=(10,8), notex=True, skip_linear=skip_linear)
     ax = axlist
     ax.set_title(f'scaling = {scaling}', fontsize=16)
@@ -830,7 +832,7 @@ def main(state):
         fontsize=16,
     )
 
-    st.pyplot(fig)
+    plot_slot.pyplot(fig)
     #plt.show()
     #plt.savefig('plots/imagenet_probe.pdf', bbox_inches='tight')
 
